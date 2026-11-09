@@ -96,7 +96,12 @@ function finish() {
   $('result-emoji').textContent = emoji;
   $('result-type').textContent = type;
   $('result-title').textContent = title;
-  $('result-description').textContent = description;
+  $('result-description').replaceChildren();
+  (description.match(/[^.!?]+[.!?]?/g) || [description]).forEach(sentence => {
+    const line = document.createElement('span');
+    line.textContent = sentence.trim();
+    $('result-description').append(line);
+  });
   $('result-tip').textContent = tip;
   $('share-status').textContent = '';
   $('spectrums').replaceChildren();
@@ -152,4 +157,11 @@ $('home-button').addEventListener('click', () => {
  showScreen('start');
  $('start-button').textContent = answers.some(value => value !== null) ? '이어서 테스트하기 ↗' : '나의 별난 모습 찾기 ↗';
  $('start-button').focus();
+});
+
+$('result-home-button').addEventListener('click', () => {
+  answers = Array(16).fill(null); current = 0; latestResult = null;
+  showScreen('start');
+  $('start-button').textContent = '나의 별난 모습 찾기 ↗';
+  $('start-button').focus();
 });

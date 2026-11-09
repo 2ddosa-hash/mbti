@@ -28,3 +28,29 @@ body{background:radial-gradient(ellipse at 85% 0%,#27233e 0%,transparent 48%),ra
 /* Prominent MBTI result */
 #result-type{display:inline-block;font-size:clamp(36px,7vw,52px);font-weight:900;line-height:1.2;letter-spacing:5px;padding:12px 24px;border-radius:18px;box-shadow:0 8px 32px #c3f08b18}
 @media(max-width:580px){#result-type{font-size:38px;letter-spacing:4px;padding:10px 20px}}
+
+/* Refined, typography-led result layout */
+.result{max-width:740px;padding-top:54px}
+.result>.eyebrow{font-size:11px;letter-spacing:2px;white-space:nowrap}
+.result-emoji{font-size:64px;margin:22px auto 8px}
+#result-type{display:block;background:none;border:0;border-radius:0;box-shadow:none;padding:0;color:var(--green);font-size:clamp(64px,14vw,94px);font-weight:900;letter-spacing:8px;line-height:1.15;white-space:nowrap;text-shadow:0 4px 35px #c3f08b15}
+.result h1{font-size:clamp(17px,4.5vw,32px);letter-spacing:-1px;white-space:nowrap;margin:18px 0 16px;font-weight:800}
+.result-description{max-width:none;margin:0 auto 34px;font-size:clamp(9px,2.25vw,15px);line-height:2.1;letter-spacing:-.2px}
+.result-description>span{display:block;white-space:nowrap}
+.result-details{border-radius:20px;padding:28px 32px;background:linear-gradient(135deg,#ffffff07,#ffffff02);border:1px solid #ffffff10;box-shadow:none}
+.result-details h2{font-size:15px;letter-spacing:-.3px;white-space:nowrap;margin-bottom:26px}
+.spectrum{margin-bottom:22px}.spectrum-track{height:5px}.spectrum-label{font-size:12px}.balanced{font-size:clamp(8px,2.15vw,11px);white-space:nowrap}.result-details .small{font-size:clamp(8px,2.15vw,12px);white-space:nowrap}
+.tip{border-left:0;border-top:1px solid #ffffff12;border-bottom:1px solid #ffffff12;padding:23px 0;margin:28px 0;text-align:center}
+.tip span{white-space:nowrap;font-size:clamp(10px,2.6vw,12px);letter-spacing:.4px}
+.tip p{white-space:nowrap;font-size:clamp(8px,2.1vw,14px);letter-spacing:-.3px;margin:10px 0 0}
+.result-actions button,.result-home-button{white-space:nowrap}
+.result-home-button{display:block;width:100%;margin-top:12px;background:transparent;border-color:#ffffff18;color:#b6bdd2;font-size:13px;padding:13px 20px}
+#share-status{font-size:clamp(8px,2.1vw,12px);white-space:nowrap}
+@media(max-width:580px){.result{padding-top:35px}.result-details{padding:24px 18px}.result-emoji{font-size:52px}.result-actions{flex-direction:row;gap:8px}.result-actions button{padding:15px 10px;font-size:13px}#result-type{font-size:70px;letter-spacing:6px}.spectrum-label{font-size:11px}}
+
+/* Compact result heading and rounded bottom navigation */
+.result-emoji{line-height:1.1;margin:18px auto 0}
+#result-type{margin-top:0;line-height:1.05}
+.result-home-button{min-height:46px;padding:12px 18px;border:1px solid #505a75;border-radius:12px;background:#ffffff08;color:#e3e8f5;font-weight:700;line-height:1.5;transition:background .18s,border-color .18s}
+.result-home-button:hover{background:#c3f08b12;border-color:#a6c77f;color:#d8f6bb}
+@media(max-width:580px){.result-emoji{margin-bottom:0;line-height:1.1}.result-home-button{font-size:12px}}
